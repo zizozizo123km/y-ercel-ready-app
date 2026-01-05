@@ -1,0 +1,48 @@
+This configuration file is generated for a modern web application project (like a large-scale application often found at companies such as Facebook), utilizing modern ECMAScript features, browser DOM APIs, and integrating build references.
+
+// tsconfig.json
+{
+  "compilerOptions": {
+    /* Required Libraries */
+    "lib": ["ESNext", "DOM"],
+
+    /* Basic Options */
+    "target": "ES2020",
+    "module": "ESNext",
+    "jsx": "react-jsx", // Standard for modern React applications
+
+    /* Output and Source Mapping */
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+
+    /* Strictness and Type Checking */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Module Resolution */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // Allows default import syntax from modules that do not have a default export
+    "resolveJsonModule": true,
+    "skipLibCheck": true // Speeds up compilation
+  },
+  
+  /* Project References (Required) */
+  // Used for monorepos or separating build configurations (e.g., separating frontend build from Node backend configuration)
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ],
+
+  /* File Inclusion */
+  "include": [
+    "src/**/*"
+  ],
+
+  /* File Exclusion */
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}
