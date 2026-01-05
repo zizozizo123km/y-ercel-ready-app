@@ -1,0 +1,366 @@
+# Built by https://www.toptal.com/developers/gitignore/api/facebook
+# for https://github.com/github/gitignore
+
+### Adobe
+# https://github.com/github/gitignore/blob/main/Global/Adobe.gitignore
+*.log
+*.tmp
+*.bak
+*.old
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.ncb
+*.suo
+*.ilk
+*.aps
+*.pch
+*.vcproj.*.user
+*.user
+*.pdb
+*.ipch
+*.com
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+*.o
+*.out
+*.app
+*.dSYM
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+.sass-cache/
+.bundle/
+log/
+tmp/
+vendor/bundle
+.rake
+.rspec
+/coverage
+/spec/reports
+.idea/
+.vscode/
+.history
+/node_modules
+/bower_components
+/dist
+/build
+/flow-typed
+/coverage
+/elm-stuff
+/jspm_packages
+/typings
+.babelrc
+.editorconfig
+.eslintrc
+.flowconfig
+.prettierrc
+.stylelintrc
+.tern-project
+.travis.yml
+.appveyor.yml
+.drone.yml
+.circleci/
+/target
+/rebar3/
+/erl_crash.dump
+/npm-debug.log*
+/yarn-error.log*
+/lerna-debug.log*
+
+# Adobe Photoshop temporary files
+PSAutoSave
+
+# Premiere Pro
+*.prproj.bak
+
+# After Effects
+*.aep.bak
+
+# InDesign
+*.idml.bak
+*.indd.bak
+
+# Acrobat
+*.pdf.bak
+
+# XD
+*.xd.bak
+
+# Bridge
+*.bridgecache
+*.bridgecachet
+
+### Android
+# https://github.com/github/gitignore/blob/main/Android/Android.gitignore
+/captures/
+/gradle
+.externalNativeBuild
+.gradle
+/build
+.idea/
+local.properties
+.cxx/
+*.iml
+*.iws
+*.ipr
+
+# Android Studio 3.2+
+# Some resource files of earlier versions of the IDE are excluded above.
+# https://developer.android.com/studio/build/build-files#sync_project
+# User-specific local configuration
+# The only exception is when you store your environment secrets in a file that is not committed to VCS.
+# Example: local.properties file should be excluded unless you need to share a file like this with your team for build process.
+
+# The Android Gradle Plugin creates a .gitignore file in each module,
+# which excludes the following files (or similar):
+# build/
+# .cxx/
+# .externalNativeBuild/
+
+# Exclude all compiled and/or generated files.
+/app/build/
+/app/.cxx/
+/app/.externalNativeBuild/
+/gradle.properties
+# Excluding the entire .idea folder can cause issues with different versions of Android Studio.
+# A compromise is to exclude the .idea/workspace.xml file.
+# .idea/workspace.xml
+# .idea/libraries/
+# .idea/modules.xml
+
+# If you use the NDK, make sure you don't commit the generated files.
+# The Android Gradle Plugin generates the .cxx folder which contains native build files.
+# The generated files can include the .so files (shared libraries) which are platform-dependent.
+# It is best practice to let the build system generate these files.
+
+### Common
+# https://github.com/github/gitignore/blob/main/Global/Common.gitignore
+# Misc
+*.log
+*.log.*
+*.stackdump
+*.trace
+*.core
+*.dump
+*.backup
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+# Temporary files from various editors and build systems
+*#
+*#*
+/tmp/
+/temp/
+# Build artifacts
+/target/
+/out/
+/dist/
+/build/
+/bin/
+/obj/
+# OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that are used by various build tools but shouldn't be committed
+.cache/
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+.venv/
+/venv/
+# Configuration
+.editorconfig
+.gitattributes
+.gitmodules
+# Dependencies
+/node_modules/
+/bower_components/
+/vendor/
+# Java
+*.class
+*.jar
+*.war
+*.ear
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+# macOS
+.localized
+# IDE files
+.idea/
+.vscode/
+# Android
+local.properties
+# iOS
+/Pods/
+# Unity
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/UserSettings/
+/obj/
+/Logs/
+/MemoryCaptures/
+/OcclusionCullingData/
+/ProfilerLogs/
+/ShaderCache/
+/Editor.Unity/
+/ExternalTools/
+/ExternalTool/
+/ExternalLibrary/
+/ExternalLibraries/
+/Assets/AssetStoreTools/
+/Assets/Plugins/Android/
+/Assets/Plugins/iOS/
+/Assets/Plugins/x86/
+/Assets/Plugins/x86_64/
+/Assets/StreamingAssets/
+/Assets/AssetBundles/
+/Assets/Generated/
+/Assets/Resources/
+/Assets/StreamingAssets/
+/Assets/Scripts/
+/Assets/Shaders/
+/Assets/TextMesh Pro/
+/Assets/Audio/
+/Assets/Videos/
+/Assets/Models/
+/Assets/Materials/
+/Assets/Textures/
+/Assets/Prefabs/
+/Assets/Scenes/
+/Assets/Scripts/
+/Assets/Standard Assets/
+/Assets/ProCore/
+/Assets/PostProcessing/
+/Assets/DOTween/
+/Assets/Oculus/
+/Assets/GoogleVR/
+/Assets/Vuforia/
+/Assets/Zenject/
+/Assets/StandardAssets/
+/Assets/ThirdParty/
+/Assets/3rdParty/
+/Assets/Third-Party/
+/Assets/3rd-Party/
+/Assets/ThirdPartyAssets/
+/Assets/Plugins/
+/Assets/Gizmos/
+/Assets/Editor/
+/Assets/Documentation/
+/Assets/Tests/
+/Assets/Playables/
+/Assets/StreamingAssets/
+/Assets/Plugins/Android/
+/Assets/Plugins/iOS/
+/Assets/Plugins/x86/
+/Assets/Plugins/x86_64/
+/Assets/Standard Assets/
+/Assets/ProCore/
+/Assets/PostProcessing/
+/Assets/DOTween/
+/Assets/Oculus/
+/Assets/GoogleVR/
+/Assets/Vuforia/
+/Assets/Zenject/
+/Assets/StandardAssets/
+/Assets/ThirdParty/
+/Assets/3rdParty/
+/Assets/Third-Party/
+/Assets/3rd-Party/
+/Assets/ThirdPartyAssets/
+
+# Facebook specific rules
+# Facebook projects often have their own internal build systems and generated files.
+# General recommendations for any software project apply.
+
+# Typical mobile app build outputs (Android/iOS) should be handled by their respective rules above.
+
+# Potential additional files/folders often seen in large scale projects (depending on technology):
+
+# Buck/Gradle/Maven/Internal build system outputs
+# Assuming standard locations for generated files:
+/buck-out/
+/bazel-bin/
+/bazel-genfiles/
+/bazel-testlogs/
+/bazel-out/
+.buckd/
+.buck-targets
+.bazelrc.local
+.bazel.lock
+/generated/
+/gen/
+/tmp_artifacts/
+
+# Hermes/Metro/React Native specific files (if applicable to the project)
+/node_modules/
+/dist/
+/out/
+/flow-typed/
+/coverage/
+/metro-cache/
+/haste-map/
+/watchman/
+/watchman.log
+/react-native-codegen/
+
+# Python files (if Python is used for scripts/backend/tools)
+*.pyc
+__pycache__/
+.env
+.venv/
+
+# PHP files (if PHP/Hack is used)
+/vendor/
+/composer.lock
+/hhvm.hhbc
+
+# Database/Migration files (often handled by specific tooling)
+*.sqlite
+*.db
+/migrations/
+/seeds/
+
+# Tooling configurations that should remain private
+.secrets
+*.key
+*.pem
+*.pfx
+.ssh
+.aws
+.npmrc
+.yarnrc
+
+# Testing artifacts
+/junit-xml/
+/instrumentation-reports/
+
+# If using Facebook internal tools, specific outputs might need excluding.
+# Example: files generated by internal code generation frameworks.
+# (These are usually highly project specific and cannot be guessed universally)
+
+# Add any specific files/folders that your particular Facebook project structure generates/uses
+# that should not be committed.
