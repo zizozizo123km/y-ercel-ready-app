@@ -1,0 +1,117 @@
+/* Custom properties, i.e. variables, for a Facebook-like application */
+/* Variables are used for colors, fonts, spacing, and shadows */
+
+:root {
+  /* COLORS */
+
+  /* Primary Facebook Blue */
+  --facebook-blue: #1877f2;
+  --facebook-blue-hover: #166ae6;
+  --facebook-blue-active: #1459c5;
+
+  /* Neutrals (Grays/Whites) */
+  --primary-background: #f0f2f5; /* Light gray background, typical for Facebook */
+  --secondary-background: #ffffff; /* White background for posts/cards */
+  --input-background: #ebf0f5; /* Background for text inputs/search bars */
+  --divider-color: #ced0d4; /* Light gray for dividers and borders */
+  --text-primary: #050505; /* Near black text */
+  --text-secondary: #606770; /* Gray text for secondary info (timestamps, etc.) */
+  --icon-color: #606770; /* Gray color for standard icons */
+
+  /* Status Colors */
+  --success-color: #38a169; /* Green for success/online status */
+  --warning-color: #f7b928; /* Yellow/Orange for warnings */
+  --error-color: #fa383e; /* Red for errors/alerts */
+
+  /* Specific UI Colors (often derived from brand guidelines) */
+  --reaction-like: #1877f2;
+  --reaction-love: #f33e58;
+  --reaction-haha: #f7b928;
+  --reaction-wow: #f7b928;
+  --reaction-sad: #f7b928;
+  --reaction-angry: #e97a3a;
+
+  /* Live/Active/Focus */
+  --focus-ring-color: rgba(24, 119, 242, 0.4);
+  --unread-notification-dot: #fa383e;
+
+  /* TYPOGRAPHY */
+
+  --font-family-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-root: 16px;
+
+  --font-size-h1: 24px;
+  --font-size-h2: 20px;
+  --font-size-large: 17px;
+  --font-size-base: 15px; /* Standard text size for posts */
+  --font-size-small: 13px; /* Smaller text for secondary info, comments */
+  --font-size-caption: 12px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600; /* Used for names, important links */
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.3333;
+  --line-height-tight: 1.2;
+
+  /* SPACING */
+
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px; /* Standard internal padding/margin */
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+
+  /* BORDERS & RADIUS */
+
+  --border-radius-pill: 9999px; /* For buttons and profile pics */
+  --border-radius-input: 18px; /* For search bars and standard inputs */
+  --border-radius-card: 8px; /* Standard card/post container radius */
+  --border-radius-sm: 4px;
+
+  --border-width-default: 1px;
+  --border-style-default: solid;
+
+  /* SHADOWS (Used lightly, Facebook tends to use subtle shadows) */
+
+  /* Subtle shadow for elevated components like modals or specific cards */
+  --shadow-level-1: 0 1px 2px rgba(0, 0, 0, 0.2);
+  /* Standard shadow for posts/cards on the feed */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  /* Stronger shadow for modals or popovers */
+  --shadow-popover: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+
+  /* TRANSITIONS */
+  --transition-default: 0.15s ease-out;
+
+  /* Z-INDEX (Conceptual layers) */
+  --z-index-default: 1;
+  --z-index-dropdown: 100;
+  --z-index-navbar: 500;
+  --z-index-modal-backdrop: 900;
+  --z-index-modal: 1000;
+  --z-index-tooltip: 1100;
+}
+
+/* Dark Mode adaptation (using a data attribute or class) */
+/* This is a basic template for common FB Dark Mode colors */
+[data-theme='dark'] {
+  /* COLORS */
+  --primary-background: #18191a; /* Dark background */
+  --secondary-background: #242526; /* Darker card/post background */
+  --input-background: #3a3b3c; /* Dark input background */
+  --divider-color: #3e4042;
+  --text-primary: #e4e6eb; /* Light text */
+  --text-secondary: #b0b3b8; /* Lighter gray text */
+  --icon-color: #b0b3b8;
+
+  /* Primary Blue remains the same */
+  --facebook-blue: #2374e1; /* Often a slightly lighter blue contrast in dark mode */
+  --facebook-blue-hover: #1c62b9;
+
+  /* Shadows are usually removed or minimized in Dark Mode */
+  --shadow-card: none;
+  --shadow-popover: 0 12px 28px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
