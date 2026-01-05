@@ -1,0 +1,196 @@
+/* src/components/Header/Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 56px; /* Standard Facebook header height */
+}
+
+/* --- Left Section (Logo and Search) --- */
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo > img {
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 9px 15px;
+  margin-left: 10px;
+  border-radius: 50px;
+  width: 240px; /* Standard search bar width */
+}
+
+.header__search > .MuiSvgIcon-root {
+  color: #606770; /* Standard icon color */
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.header__search > input {
+  border: none;
+  background: transparent;
+  outline-width: 0;
+  color: #1c1e21;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* Hide input placeholder on small screens if necessary, though Facebook usually keeps it */
+@media (max-width: 768px) {
+  .header__search {
+    width: auto;
+    min-width: 40px; /* Only show icon initially */
+    padding: 9px;
+  }
+  .header__search > input {
+    display: none;
+  }
+}
+
+/* --- Middle Section (Navigation Links) --- */
+.header__middle {
+  display: flex;
+  flex: 1; /* Allows middle section to take up available space */
+  justify-content: center;
+  max-width: 700px;
+}
+
+.header__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  cursor: pointer;
+  min-width: 120px;
+  height: 56px; /* Match header height for visual alignment */
+  transition: background-color 0.1s ease;
+  position: relative;
+}
+
+.header__option > .MuiSvgIcon-root {
+  color: #606770;
+  font-size: 30px;
+}
+
+.header__option:hover {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+/* Active State */
+.header__option--active {
+  border-bottom: 3px solid #1877f2;
+}
+
+.header__option--active > .MuiSvgIcon-root {
+  color: #1877f2;
+}
+
+/* Indicator bar (only visible when active, implemented via border-bottom, but sometimes a separate bar is used) */
+.header__option--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #1877f2;
+}
+
+/* Hide text/options on small screens */
+@media (max-width: 1024px) {
+  .header__option {
+    padding: 0 15px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide middle section entirely or reduce drastically on mobile */
+  .header__middle {
+    flex: 0;
+    justify-content: flex-end; /* If we must keep it, push to the side */
+  }
+  .header__option {
+    display: none; /* Usually only logo/search/profile are visible on small screens */
+  }
+  
+  /* Show only the Home icon maybe */
+  .header__option:nth-child(1) {
+    display: flex;
+  }
+}
+
+/* --- Right Section (User Menu and Icons) --- */
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.header__info:hover {
+  background-color: #f2f2f2;
+}
+
+.header__info > h4 {
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #050505;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide user name on smaller screens */
+@media (max-width: 600px) {
+  .header__info > h4 {
+    display: none;
+  }
+  .header__info {
+    padding: 5px;
+  }
+}
+
+
+/* Right Section Icons (Action Buttons) */
+.header__iconButton {
+  background-color: #e4e6eb;
+  color: #050505;
+  margin-left: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.header__iconButton:hover {
+  background-color: #d8dade;
+}
+
+.header__iconButton > .MuiSvgIcon-root {
+  font-size: 24px;
+}
