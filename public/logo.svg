@@ -1,0 +1,7 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Facebook Blue background (#1877F2) with standard rounding -->
+  <rect width="1200" height="1200" rx="260" fill="#1877F2"/>
+
+  <!-- White 'f' icon path -->
+  <path fill="#FFFFFF" d="M738 522h-126V420c0-30 18-42 36-42h84V252H606c-90 0-144 54-144 144v126H390v156h72V900h144V678h102L738 522z"/>
+</svg>
