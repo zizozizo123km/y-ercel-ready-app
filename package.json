@@ -1,0 +1,25 @@
+{
+  "name": "facebook-app-clone",
+  "version": "1.0.0",
+  "description": "A project cloning the basic functionality or UI of the Facebook application (تطبيق فيسبوك).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "facebook",
+    "social-media",
+    "تطبيق",
+    "فيسبوك",
+    "app-clone"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  }
+}
