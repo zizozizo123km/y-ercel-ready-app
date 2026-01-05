@@ -1,0 +1,375 @@
+:root {
+  --facebook-blue: #1877f2;
+  --facebook-hover-blue: #1461cc;
+  --facebook-green: #36a420;
+  --facebook-light-gray: #f0f2f5;
+  --facebook-medium-gray: #ccd0d5;
+  --facebook-dark-gray: #606770;
+  --font-family-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius-large: 8px;
+  --border-radius-medium: 6px;
+  --border-radius-small: 4px;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-segoe);
+  background-color: var(--facebook-light-gray);
+  color: #1c1e21;
+  line-height: 1.34;
+}
+
+a {
+  text-decoration: none;
+  color: var(--facebook-blue);
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Typography Helpers */
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* Layout Containers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Components --- */
+
+/* Input Fields (Text, Email, Password) */
+.facebook-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--facebook-medium-gray);
+  border-radius: var(--border-radius-medium);
+  font-size: 17px;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.facebook-input:focus {
+  border-color: var(--facebook-blue);
+  box-shadow: 0 0 0 1px var(--facebook-blue);
+}
+
+/* Primary Button (Blue) */
+.facebook-button-primary {
+  width: 100%;
+  background-color: var(--facebook-blue);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 0;
+  border-radius: var(--border-radius-medium);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.facebook-button-primary:hover {
+  background-color: var(--facebook-hover-blue);
+}
+
+/* Secondary Button (Green - used for Signup) */
+.facebook-button-secondary {
+  background-color: var(--facebook-green);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-medium);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.facebook-button-secondary:hover {
+  background-color: #2b8c1c; /* Slightly darker green */
+}
+
+/* Card/Panel Styling (White background) */
+.facebook-card {
+  background-color: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+/* Divider Line */
+.facebook-divider {
+  border-top: 1px solid var(--facebook-light-gray);
+  margin: 20px 0;
+}
+
+/* --- Specific Page Styles (Login/Signup Focus) --- */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 72px 0 132px 0; /* Adjust padding to center content vertically on large screens, but allow scroll on small ones */
+}
+
+.login-content {
+  display: flex;
+  width: 980px;
+  justify-content: space-between;
+  align-items: flex-start; /* Align logo/text and form to the top of the container */
+}
+
+.login-left {
+  width: 500px;
+  padding-right: 32px;
+}
+
+.login-logo {
+  height: 106px;
+  margin: -28px; /* Pull the logo up to align properly with Facebook's layout */
+}
+
+.login-logo img {
+  height: 100%;
+}
+
+.login-left h2 {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  width: 450px;
+  color: #1c1e21;
+  margin-top: 16px;
+}
+
+.login-right {
+  width: 396px;
+  text-align: center;
+}
+
+.login-form {
+  padding: 10px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form .facebook-input {
+  margin-bottom: 0;
+}
+
+.forgot-password-link {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.signup-section {
+  padding-top: 25px;
+  margin: 0 auto; /* Center the signup button */
+  width: 70%; /* Give the signup button less width than the primary login button */
+}
+
+.create-page-link {
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.create-page-link strong {
+  font-weight: bold;
+}
+
+/* Responsive adjustments (Basic example for typical Facebook layout responsiveness) */
+@media (max-width: 992px) {
+  .login-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .login-left {
+    width: 100%;
+    max-width: 400px;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-left h2 {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .login-logo {
+    margin: 0 auto;
+    margin-bottom: -15px;
+  }
+
+  .login-right {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .login-page {
+    background-color: white; /* Change background for smaller screens/mobile view */
+  }
+
+  .facebook-card {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: white;
+  }
+
+  .login-page {
+    padding: 20px 0;
+  }
+}
+
+/* Modal Styling (Example for Signup Modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 432px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--facebook-light-gray);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  font-size: 32px;
+  line-height: 38px;
+  color: #1c1e21;
+}
+
+.modal-header p {
+  font-size: 15px;
+  color: var(--facebook-dark-gray);
+}
+
+.modal-close-button {
+  background: none;
+  font-size: 24px;
+  color: var(--facebook-dark-gray);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-button:hover {
+  background-color: var(--facebook-light-gray);
+}
+
+/* Signup Form specific styles */
+.signup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.signup-form .full-width {
+  grid-column: 1 / 3;
+}
+
+.signup-form select, .signup-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid var(--facebook-medium-gray);
+  border-radius: var(--border-radius-small);
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+}
+
+.date-of-birth-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gender-radio-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.radio-option {
+  border: 1px solid var(--facebook-medium-gray);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.radio-option input[type="radio"] {
+  transform: scale(1.2);
+}
+
+.policy-text {
+  font-size: 11px;
+  color: var(--facebook-dark-gray);
+  margin: 10px 0;
+}
+
+.policy-text a {
+  font-size: 11px;
+}
+
+.signup-submit-button {
+  margin: 20px auto 0 auto;
+  width: 194px; /* Fixed width as seen on FB */
+  font-size: 18px;
+  padding: 10px 16px;
+}
